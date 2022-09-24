@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* Variables */
+
+:root{
+    /*Fonts*/
+    --Fprimary:'Big Shoulders Display', cursive;
+    --Fsecondary: 'Lexend Deca', sans-serif;
+    /*Colors*/
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    --TransparentWhite: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --VeryLightGray : hsl(0, 0%, 95%); /*background, headings, buttons*/
+}
+
+/* Utilities */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1REM = 10px */
+}
+body {
+    font-family: var(--Fprimary);
+    font-size: 1.5rem;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Globals */
+
+a {
+    text-decoration: none;
+} 
+h2 {
+    font-size: 4rem;
+}
+
+/*----- Mobile: 375px -----*/
+/*Container Main*/
+.main__container{
+    width: 32.7rem;
+    height: 132.7rem;
+    display: flex;
+    flex-direction: column;
+    margin: 9rem auto 3rem;
+}
+/*Sections*/
+.section{
+    height: 44rem;
+    padding: 5rem;
+}
+.section__title{
+    color: var(--TransparentWhite);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.section__paragraph{
+    font-family: var(--Fsecondary);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: var(--TransparentWhite);
+    margin-bottom: 3.3rem;
+}
+.section__icon{
+    margin-bottom: 2rem;
+}
+/*Section1*/
+.section1{
+    background: var(--BrightOrange);
+    border-radius: 5% 5% 0% 0%;
+}
+/*Section2*/
+.section2{
+    background: var(--DarkCyan);
+}
+/*Section3*/
+.section3{
+    background: var(--VeryDarkCyan);
+    border-radius: 0% 0% 5% 5%;
+}
+/*Buttons*/
+.button{
+    font-size: 2rem;
+    border: solid white;
+    border-radius: 3rem;
+    padding: 1rem 3rem;
+    background-color: white;
+}
+.button:hover{
+    background:none;
+    color: white;
+}
+.button1{
+    color: var(--BrightOrange);
+}
+.button2{
+    color: var(--DarkCyan);
+}
+.button3{
+    color: var(--VeryDarkCyan);
+}
+/*Footer*/
+.footer { font-size: 1.5rem; text-align: center; margin-bottom: 3rem; }
+.footer a { color: hsl(228, 45%, 44%); }
+
+/*----- Desktop: 1000px -----*/
+
+@media screen and (min-width: 1000px)  {
+    .main__container{
+        width: 92rem;
+        height: 50rem;
+        display: flex;
+        flex-direction: row;
+        margin: 9rem auto 3rem;
+    }
+    .section__paragraph{
+        font-size: 1.48rem;
+
+    }
+    .section{
+        width: 40rem;
+        height: 50rem;
+    }
+    .section1{
+        border-radius: 5% 0% 0% 5%;
+    }
+    .section3{
+        border-radius: 0% 5% 5% 0%;
+    }
+    .flex{
+        height: 29rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .button{
+        width: 70%;
+    }
+    .footer { font-size: 1.7rem;}
+}
